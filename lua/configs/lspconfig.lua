@@ -44,7 +44,7 @@ local servers = {
   "eslint",
   "pyright",
   "gopls",
-  -- "clangd",
+  "clangd",
 }
 
 -- Optional per-server overrides
@@ -106,7 +106,7 @@ for _, name in ipairs(servers) do
 end
 
 -- 3) Arduino language server (bootstrap with cmd)
-local MY_FQBN = "arduino:avr:nano:cpu=atmega328old"
+local MY_FQBN = "rp2040:rp2040:rpipico"
 vim.lsp.config("arduino_language_server", {
   cmd = {
     "arduino-language-server",
